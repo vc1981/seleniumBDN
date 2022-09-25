@@ -22,5 +22,11 @@ jobs:
       - name: Install xvfb
         run: sudo apt-get install xvfb
 
-      - name: Running the Python script
+      - name: Running the Python script Google search
         run: python test_google_search.py
+
+      - name: Running the Python script Selenium Getting started
+        run: python test_selenium_getting_started.py
+
+      - name: Running the Python script Selenium
+        run: python test_selenium.py
