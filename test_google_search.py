@@ -13,9 +13,9 @@ class TestSelenium:
         self.driver.get("https://www.google.com/")
         self.driver.save_screenshot("shot.png")
         assert self.driver.title == "Google"
-        accept_cookie = WebDriverWait(self.driver, 5).until(
-            expected_conditions.visibility_of_element_located((By.ID, "L2AGLb"))
-        ).click()
+        # accept_cookie = WebDriverWait(self.driver, 5).until(
+        #    expected_conditions.visibility_of_element_located((By.ID, "L2AGLb"))
+        #).click()
 
 
     @parameterized.expand(testing_list)
