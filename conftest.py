@@ -4,11 +4,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from pyvirtualdisplay import Display
 
 @pytest.fixture(scope='class')
 def setup(request):
-    # display = Display(size=(1920, 1200), color_depth=24, backend="xvfb")
-    # display.start()
+    display = Display(size=(1920, 1200), color_depth=24, backend="xvfb")
+    display.start()
 
     chrome_options = Options()
     options = [
@@ -33,4 +34,4 @@ def setup(request):
 
     yield driver
     driver.close()
-    # display.stop()
+    display.stop()
