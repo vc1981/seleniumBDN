@@ -13,7 +13,7 @@ jobs:
           python-version: '3.9'
       - name: Installing package list
         run: apt list --installed
-      - name: Removing previous chrome instances on runner
+      - name: Install Google Chrome
         run: sudo apt install google-chrome-stable
 
           # Need to fetch reqs if needed
@@ -24,9 +24,6 @@ jobs:
 
       - name: Running the Python script Google search
         run: pytest test_google_search.py
-
-      - name: Running the Python script Selenium Getting started
-        run: pytest test_selenium_getting_started.py
 
       - name: Running the Python script Selenium
         run: pytest test_selenium.py
